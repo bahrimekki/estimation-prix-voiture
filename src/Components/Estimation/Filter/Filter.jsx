@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Filter.css";
 
 function Filter({
+    prixestime,
     card2,
     Suivent,
     Marque,
@@ -9,8 +10,73 @@ function Filter({
     Annee,
     Carburant,
     GearBox,
-    prixestime,
+    toutfilter,
+    automobils,
 }) {
+    // const [prixestime, setPrixestime] = useState();
+    // const [annee, setAnnee] = useState("");
+    // const [gearbox, setGearBox] = useState("");
+    // const [marque, setMarque] = useState("");
+    // const [modele, setModele] = useState("");
+    // const [road, setRoad] = useState("");
+    // const [carburant, setCarburant] = useState("");
+    // const allprix = [];
+
+    // const Marque = (e) => {
+    //     setMarque(e.target.value);
+    // };
+    // const Modele = (e) => {
+    //     setModele(e.target.value);
+    // };
+    // const Carburant = (e) => {
+    //     setCarburant(e.target.value);
+    // };
+    // const GearBox = (e) => {
+    //     setGearBox(e.target.value);
+    // };
+    // const Annee = (e) => {
+    //     setAnnee(e.target.value);
+    // };
+
+    // const toutfilter = (e) => {
+    //     e.filter((element) =>
+    //         annee === "" ? element.year !== annee : element.year === annee
+    //     )
+    //         .filter((element) =>
+    //             gearbox === ""
+    //                 ? element.boite !== gearbox
+    //                 : element.boite === gearbox
+    //         )
+    //         .filter((element) =>
+    //             road === ""
+    //                 ? parseInt(element.road) !== road
+    //                 : parseInt(element.road) <= road
+    //         )
+    //         .filter((element) =>
+    //             carburant === ""
+    //                 ? element.fuel !== carburant
+    //                 : element.fuel === carburant
+    //         )
+    //         .filter((element) =>
+    //             marque === ""
+    //                 ? element.type !== marque
+    //                 : element.type.toLowerCase().includes(marque.toLowerCase())
+    //         )
+    //         .filter((element) =>
+    //             modele === ""
+    //                 ? element.type !== modele
+    //                 : element.type.toLowerCase().includes(modele.toLowerCase())
+    //         )
+    //         .map((element, index) =>
+    //             allprix.push(element.prix[0] * 1000 + element.prix[1])
+    //         );
+    //     setPrixestime(
+    //         allprix.length === 0
+    //             ? 0
+    //             : Math.round(allprix.reduce(reducer) / allprix.length)
+    //     );
+    // };
+
     const year = [];
 
     const yearvoitur = () => {
@@ -141,9 +207,10 @@ function Filter({
                     display: card2[5],
                 }}
             >
+                {toutfilter(automobils)}
                 <h1>Resultat</h1>
                 <p>le prix estimé de vend de votre voitur est :</p>
-                <h1>{prixestime}</h1>
+                <h1>{prixestime} TND</h1>
             </div>
             <button onClick={() => Suivent()}>
                 <div className="cerc3"></div>

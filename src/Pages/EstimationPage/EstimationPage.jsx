@@ -8,15 +8,18 @@ function EstimationPage({ automobils }) {
     const [etape, setEtape] = useState(etapetab);
     const card1 = ["block", "none", "none", "none", "none", "none"];
     const [card2, setCard2] = useState(card1);
-    const [prixestime, setPrixestime] = useState("25000 TND");
     const [i, setI] = useState(1);
     const [etapenumber, setEtapenumber] = useState("0/5");
 
+    const [prixestime, setPrixestime] = useState();
     const [carburant, setCarburant] = useState("");
     const [gearbox, setGearbox] = useState("");
     const [marque, setMarque] = useState("");
     const [modele, setModele] = useState("");
     const [annee, setAnnee] = useState();
+    const [road, setRoad] = useState("");
+    const allprix = [];
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
     const Marque = (e) => {
         setMarque(e.target.value);
@@ -32,6 +35,46 @@ function EstimationPage({ automobils }) {
     };
     const GearBox = (e) => {
         setGearbox(e);
+    };
+
+    const toutfilter = (e) => {
+        e.filter((element) =>
+            annee === "" ? element.year !== annee : element.year === annee
+        )
+            .filter((element) =>
+                gearbox === ""
+                    ? element.boite !== gearbox
+                    : element.boite === gearbox
+            )
+            .filter((element) =>
+                road === ""
+                    ? parseInt(element.road) !== road
+                    : parseInt(element.road) <= road
+            )
+            .filter((element) =>
+                carburant === ""
+                    ? element.fuel !== carburant
+                    : element.fuel === carburant
+            )
+            .filter((element) =>
+                marque === ""
+                    ? element.type !== marque
+                    : element.type.toLowerCase().includes(marque.toLowerCase())
+            )
+            .filter((element) =>
+                modele === ""
+                    ? element.type !== modele
+                    : element.type.toLowerCase().includes(modele.toLowerCase())
+            )
+            .map((element, index) =>
+                allprix.push(element.prix[0] * 1000 + element.prix[1])
+            );
+
+        allprix.length === 0
+            ? setPrixestime(0)
+            : setPrixestime(
+                  Math.round(allprix.reduce(reducer) / allprix.length)
+              );
     };
 
     const Suivent = () => {
@@ -104,6 +147,8 @@ function EstimationPage({ automobils }) {
                 Carburant={Carburant}
                 GearBox={GearBox}
                 prixestime={prixestime}
+                toutfilter={toutfilter}
+                automobils={automobils}
             />
             <Result
                 etape={etape}

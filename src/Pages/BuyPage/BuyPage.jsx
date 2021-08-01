@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Filter from "../../Components/Buy/Filter/Filter";
-import Card from "../../Components/Buy/Result/Card/Card";
 import CardList from "../../Components/Buy/Result/CardList/CardList";
 import "./BuyPage.css";
 function BuyPage({ automobils }) {
@@ -38,7 +37,6 @@ function BuyPage({ automobils }) {
                 gearbox={gearbox}
                 annee={annee}
             />
-            {/* <Card /> */}
         </div>
     );
 }
