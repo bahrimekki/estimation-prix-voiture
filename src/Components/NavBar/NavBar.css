@@ -1,0 +1,19 @@
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    z-index: 10;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.NavBar a {
+    text-decoration: none;
+    color: #fff;
+}
+p:hover a {
+    color: rgb(133, 130, 130);
+}

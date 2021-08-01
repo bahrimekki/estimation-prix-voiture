@@ -1,0 +1,17 @@
+.EstimationPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 50px;
+}
+.backes {
+    position: fixed;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    min-height: 100vh;
+    background: linear-gradient(#9c27b0ff, #9c27b0aa);
+}

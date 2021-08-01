@@ -1,0 +1,15 @@
+.BuyPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.back {
+    position: fixed;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    min-height: 100vh;
+    background: linear-gradient(#4b2291ff, #4b2291aa);
+}
