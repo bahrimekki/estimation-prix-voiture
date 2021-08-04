@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Filter.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Filter({ Marque, Carburant, GearBox, Annee }) {
