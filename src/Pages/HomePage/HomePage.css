@@ -40,9 +40,9 @@
     border-left: 2px solid #9c27b020;
 }
 .buy {
-    background-color: #673ab720;
-    border-top: 2px solid #673ab720;
-    border-left: 2px solid #673ab720;
+    background-color: #2196f320;
+    border-top: 2px solid #2196f320;
+    border-left: 2px solid #2196f320;
 }
 .white {
     color: white;
@@ -75,7 +75,7 @@ a span {
     background-color: #9c27b0f3;
 }
 .cerc2 {
-    background-color: #673ab7f3;
+    background-color: #2196f3f3;
 }
 .cerc,
 .cerc2 {
@@ -108,4 +108,10 @@ a span {
     .buy {
         width: 80%;
     }
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-thumb {
+    width: 0px;
 }

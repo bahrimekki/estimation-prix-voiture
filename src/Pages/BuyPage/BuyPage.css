@@ -11,5 +11,24 @@
     top: 0px;
     right: 0px;
     min-height: 100vh;
-    background: linear-gradient(#4b2291ff, #4b2291aa);
+    background: linear-gradient(#2196f350, #2196f320);
+}
+.scrollbarre {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    width: 15px;
+    height: calc(100% - 50px);
+    border-radius: 10px;
+    background: linear-gradient(to top, #ffffff50, #2f00ff50);
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+    border: solid 2px black;
 }

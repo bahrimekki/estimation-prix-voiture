@@ -1,18 +1,59 @@
 .CardList {
-    right: 20px;
-    position: absolute;
-    top: 60px;
-    left: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     padding-top: 0px;
+}
+.allCardList {
+    right: 20px;
+    position: absolute;
+    top: 60px;
+    left: 90px;
     height: 100%;
 }
+.allCardList ul {
+    position: relative;
+    background: #ffffffff;
+    display: flex;
+    width: 360px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.allCardList ul li {
+    list-style: none;
+}
+.allCardList ul li.PageNumber {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+.allCardList ul li a {
+    display: block;
+    text-decoration: none;
+    color: #2196f3;
+    font-weight: 600;
+    border-radius: 50%;
+}
+.allCardList ul li.PageNumber:hover a,
+.allCardList ul li.PageNumber.active a {
+    background: #2196f3aa;
+    color: #fff;
+}
+ul.Pagination {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
 @media (max-width: 480px) {
-    .CardList {
+    .allCardList {
         top: 120px;
         left: 5px;
         right: 5px;

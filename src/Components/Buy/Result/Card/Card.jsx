@@ -12,7 +12,7 @@ function Card({ image, type, site, year, road, fuel, boite, prix }) {
             </div>
             <div className="content">
                 <p>{type}</p>
-                <a href={site}>{site}</a>
+                <a href={"https://www." + site}>{site}</a>
                 <div className="description">
                     <div className="d1">
                         <small>YEAR</small>

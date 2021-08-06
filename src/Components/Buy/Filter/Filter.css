@@ -28,7 +28,7 @@
     display: none;
 }
 .font {
-    color: #00168fc9;
+    color: #2196f3c9;
     font-size: 21px;
 }
 .fontcont {
@@ -48,7 +48,7 @@
     right: -15px;
     background: #fff;
     border-radius: 50%;
-    border: solid 4px #5e399c;
+    border: solid 4px #193651;
     cursor: pointer;
     z-index: 1000;
     padding: 0px;
@@ -60,7 +60,7 @@
     transform: rotateZ(180deg);
 }
 .Filter.open {
-    width: 180px;
+    width: 200px;
     background: #fff;
 }
 
@@ -119,4 +119,107 @@
     .OpenClose.active {
         transform: rotateZ(270deg);
     }
+}
+
+.wrapper {
+    position: relative;
+    width: 115px;
+    height: 36px;
+    background-color: #ffffff;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin-top: 6px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+.slider-track {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 5px;
+}
+input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    height: 5px;
+}
+input[type="range"]::-ms-track {
+    appearance: none;
+    height: 5px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    background-color: #2196f3;
+    cursor: pointer;
+    margin-top: -9px;
+    pointer-events: auto;
+    border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #2196f3;
+    pointer-events: auto;
+}
+input[type="range"]::-ms-thumb {
+    appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #2196f3;
+    pointer-events: auto;
+}
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: #ffffff;
+    border: 3px solid #2196f3;
+}
+.values {
+    background-color: #2196f3;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ffffff;
+}
+.values:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 5px solid #2196f3;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
 }

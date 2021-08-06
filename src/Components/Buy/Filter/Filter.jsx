@@ -1,7 +1,16 @@
 import React from "react";
 import "./Filter.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-function Filter({ Marque, Carburant, GearBox, Annee }) {
+function Filter({
+    Marque,
+    Carburant,
+    GearBox,
+    Annee,
+    slideOne,
+    slideTwo,
+    valone,
+    valtwo,
+}) {
     const year = [];
 
     const yearvoitur = () => {
@@ -9,11 +18,17 @@ function Filter({ Marque, Carburant, GearBox, Annee }) {
         for (var i = 1900; i < newyear + 1; i++) {
             year.push(i);
         }
+        return year.map((i, index) => (
+            <option key={index} value={i}>
+                {i}
+            </option>
+        ));
     };
     const togel = () => {
         document.querySelector(".OpenClose").classList.toggle("active");
         document.querySelector(".Filter").classList.toggle("open");
     };
+
     return (
         <div className="Filter">
             <button className="OpenClose" onClick={() => togel()}>
@@ -32,7 +47,34 @@ function Filter({ Marque, Carburant, GearBox, Annee }) {
                     <div className="fontcont">
                         <FontAwesomeIcon icon="dollar-sign" className="font" />
                     </div>
-                    <small>Prix</small>
+                    <small>
+                        <div className="wrapper">
+                            <div className="values">
+                                <span id="range1">min: {valone}</span>
+                                <span> - </span>
+                                <span id="range2">MAX: {valtwo}</span>
+                            </div>
+                            <div className="container">
+                                <div className="slider-track"></div>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    value={valone}
+                                    max="500"
+                                    id="slider-1"
+                                    onChange={(e) => slideOne(e)}
+                                />
+                                <input
+                                    type="range"
+                                    min="0"
+                                    value={valtwo}
+                                    max="500"
+                                    id="slider-2"
+                                    onChange={(e) => slideTwo(e)}
+                                />
+                            </div>
+                        </div>
+                    </small>
                 </div>
                 <div className="li">
                     <div className="fontcont">
@@ -70,14 +112,7 @@ function Filter({ Marque, Carburant, GearBox, Annee }) {
                     <small>
                         <select onChange={(e) => Annee(e)}>
                             <option value="">All</option>
-                            {
-                                (yearvoitur(),
-                                year.map((i, index) => (
-                                    <option key={index} value={i}>
-                                        {i}
-                                    </option>
-                                )))
-                            }
+                            {yearvoitur()}
                         </select>
                     </small>
                 </div>

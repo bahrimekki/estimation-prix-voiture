@@ -11,7 +11,7 @@
     border-radius: 15px;
     overflow: hidden;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     border-left: 2px solid rgba(255, 255, 255, 0.2);
     color: #fff;
@@ -31,6 +31,7 @@
     border: none;
     padding: 8px 20px;
     margin: 20px;
+    width: 50%;
     cursor: pointer;
 }
 .FilterEstimation button {
@@ -106,5 +107,14 @@ button:hover .cerc3 {
     .FilterEstimation {
         width: 80%;
         height: 45vh;
+    }
+    .carburant .image {
+        margin: 0px 20px;
+    }
+    .FilterEstimation button {
+        margin: 10px;
+    }
+    .FilterEstimation h1 {
+        font-size: 30px;
     }
 }

@@ -11,6 +11,9 @@ import {
     faSortNumericDownAlt,
     faFilter,
     faAngleRight,
+    faHome,
+    faCalculator,
+    faCartArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
     faCalendarAlt,
@@ -23,5 +26,8 @@ library.add(
     faSortNumericDown,
     faSortNumericDownAlt,
     faFilter,
-    faAngleRight
+    faAngleRight,
+    faHome,
+    faCalculator,
+    faCartArrowDown
 );

@@ -79,14 +79,12 @@ function EstimationPage({ automobils }) {
 
     const Suivent = () => {
         setI(i + 1);
-        console.log(i);
         if (i === 2) {
             card1[0] = "none";
             card1[1] = "block";
             etapetab[0] = "block";
             setEtape(etapetab);
             setEtapenumber("1/5");
-            console.log(etape);
             setCard2(card1);
         } else if (i === 3) {
             card1[0] = "none";
@@ -95,7 +93,6 @@ function EstimationPage({ automobils }) {
             etapetab.splice(0, 2, "block", "block");
             setEtapenumber("2/5");
             setEtape(etapetab);
-            console.log(etape);
             setCard2(card1);
         } else if (i === 4) {
             card1[0] = "none";
@@ -104,7 +101,6 @@ function EstimationPage({ automobils }) {
             etapetab.splice(0, 3, "block", "block", "block");
             setEtapenumber("3/5");
             setEtape(etapetab);
-            console.log(etape);
             setCard2(card1);
         } else if (i === 5) {
             card1[0] = "none";
@@ -113,7 +109,6 @@ function EstimationPage({ automobils }) {
             etapetab.splice(0, 4, "block", "block", "block", "block");
             setEtape(etapetab);
             setEtapenumber("4/5");
-            console.log(etape);
             setCard2(card1);
         } else if (i === 6) {
             card1[4] = "none";
@@ -122,7 +117,6 @@ function EstimationPage({ automobils }) {
             etapetab.splice(0, 5, "block", "block", "block", "block", "block");
             setEtape(etapetab);
             setEtapenumber("5/5");
-            console.log(etape);
             setCard2(card1);
             setI(1);
         } else {
@@ -131,13 +125,16 @@ function EstimationPage({ automobils }) {
             etapetab.splice(0, 5, "none", "none", "none", "none", "none");
             setEtape(etapetab);
             setEtapenumber("0/5");
-            console.log(etape);
             setCard2(card1);
         }
     };
     return (
         <div className="EstimationPage">
             <div className="backes"></div>
+            <div
+                className="imag"
+                style={{ backgroundImage: "url(/img/bacground.png)" }}
+            ></div>
             <Filter
                 card2={card2}
                 Suivent={Suivent}
